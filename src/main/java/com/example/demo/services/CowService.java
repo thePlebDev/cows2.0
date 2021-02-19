@@ -13,9 +13,9 @@ public class CowService {
 		this.cowRepository = cowRepository;
 	}
 	
-	public void addCow(Cow cow) {
+	public Cow addCow(Cow cow) {
 		// this should save our cow to the database
-		cowRepository.save(cow);
+		return cowRepository.save(cow);
 	}
 
 }
