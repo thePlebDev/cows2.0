@@ -19,10 +19,12 @@ public class Cow {
 	private int tagNumber;
 	private String details;
 	
+	
 	public Cow(int tagNumber, String details) {
 		this.tagNumber = tagNumber;
 		this.details = details;
 	}
+	public Cow() {}
 	
 	
 	public int getTagNumber() {
