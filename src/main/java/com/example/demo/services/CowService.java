@@ -1,7 +1,6 @@
 package com.example.demo.services;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,12 +24,12 @@ public class CowService {
 	}
 
 	public List<Cow> getCows() {
-		// TODO Auto-generated method stub
+		// this will get all the cows
 		return cowRepository.findAll();
 	}
 
-	public Optional<Cow> findCow(int id) {
-		Optional <Cow> cowOptional = cowRepository.findCowByTagNumber(id);
+	public List<Cow> findCow(int id) {
+		List <Cow> cowOptional = cowRepository.findCowByTagNumber(id);
 		if(cowOptional.isEmpty()) {
 			throw new IllegalStateException("no animals with that tag number found");
 		}

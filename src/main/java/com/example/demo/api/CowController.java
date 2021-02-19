@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.exceptions.CowNotFoundException;
 import com.example.demo.models.Cow;
 import com.example.demo.services.CowService;
 
@@ -37,9 +36,11 @@ public class CowController {
 	}
 	
 	@GetMapping("/{id}")
-	Cow singleCow(@PathVariable int id) {
-		return cowService.findCow(id)
-				.orElseThrow(()-> new CowNotFoundException(id));
+	List <Cow> singleCow(@PathVariable int id) {
+		return cowService.findCow(id);
 	}
+	
+	@PutMapping("/{id}")
+	
 
 }
