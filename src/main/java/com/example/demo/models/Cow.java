@@ -13,11 +13,9 @@ import javax.persistence.Table;
 public class Cow {
 
 	@Id
-	@SequenceGenerator(name="cowSequence",initialValue=0, allocationSize=1)
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="cowSequence")//specifies that this is going to be a auto generated value;
+	@GeneratedValue//specifies that this is going to be a auto generated value;
 	private Long id;
 	
-	@OneToMany
 	private int tagNumber;
 	private String details;
 	

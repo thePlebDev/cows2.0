@@ -1,10 +1,13 @@
 package com.example.demo.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.demo.models.Cow;
 import com.example.demo.repository.CowRepository;
 
+
+@Service
 public class CowService {
 	private CowRepository cowRepository;
 	
